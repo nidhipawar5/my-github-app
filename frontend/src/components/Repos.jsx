@@ -9,6 +9,12 @@ const Repos = () => {
 				<Repo />
 				<Repo />
 				<Repo />
+        <Repo />
+				<Repo />
+				<Repo />
+        <Repo />
+				<Repo />
+				<Repo />
 			</ol>
 		</div>
 	);
