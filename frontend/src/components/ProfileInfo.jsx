@@ -28,7 +28,7 @@ const ProfileInfo = ({userProfile}) => {
 	const memberSince = formatMemberSince(userProfile?.created_at)
 
 	return (
-		<div className='lg:w-1/3 w-full flex flex-col gap-2 md:sticky md:top-10'>
+		<div className='lg:w-1/3 w-full flex flex-col gap-2 lg:sticky md:top-10'>
 			<div className='bg-glass rounded-lg p-4'>
 				<div className='flex gap-4 items-center'>
 					{/* User Avatar */}
