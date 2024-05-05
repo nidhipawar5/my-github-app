@@ -47,7 +47,7 @@ const HomePage = () => {
         ) : (
           <div>Loading profile...</div>
         )}
-        <Repos />
+        {repos.length>0 && !loading && <Repos repos={repos}/>}
         {loading && <Spinner />}
       </div>
     </div>
