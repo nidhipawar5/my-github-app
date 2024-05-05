@@ -1,11 +1,23 @@
 import React from 'react'
+import toast from 'react-hot-toast';
 
 import { FaCodeBranch, FaCopy, FaRegStar } from "react-icons/fa";
 import { FaCodeFork } from "react-icons/fa6";
 import { formatDate } from '../utils/functions';
+import { PROGRAMMING_LANGUAGES } from '../utils/constants';
 
 const Repo = ({repo}) => {
+
 	const formattedDate = formatDate(repo.created_at)
+
+	const handleCloneClick = async (repo) => {
+		try {
+		    await navigator.clipboard.writeText(repo.clone_url) //copy to clipboards
+		    toast.success("Repo URL copied to clipboard")
+		} catch (error) {
+			toast.error("Clipboard write failed.")
+		}
+	}
 	return (
 		<li className='mb-10 ms-7'>
 			<span
@@ -38,6 +50,7 @@ const Repo = ({repo}) => {
 				<span
 					className='cursor-pointer bg-green-100 text-green-800 text-xs
 					font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1'
+					onClick={() => handleCloneClick(repo)}
 				>
 					<FaCopy /> Clone
 				</span>
@@ -50,9 +63,11 @@ const Repo = ({repo}) => {
 				Released on {formattedDate}
 			</time>
 			<p className='mb-4 text-base font-normal text-gray-500'>
-				{repo.description ? repo.description: "No description provided"}
+				{repo.description ? repo.description.slice(0,500) : "No description provided"}
 			</p>
-			<img src={"/javascript.svg"} alt='Programming language icon' className='h-8' />
+			{PROGRAMMING_LANGUAGES[repo.language] ? (
+				<img src={PROGRAMMING_LANGUAGES[repo.language]} alt='Programming language icon' className='h-8' />
+			) : null}
 		</li>
 	);
 };
