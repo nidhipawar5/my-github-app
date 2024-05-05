@@ -5,7 +5,7 @@ const Logout = () => {
 	return (
 		<>
 			<img
-				src={"https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"}
+				src={"https://avatar.iran.liara.run/public/91"}
 				className='w-10 h-10 rounded-full border border-gray-800'
 			/>
 
