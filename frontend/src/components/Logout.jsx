@@ -5,7 +5,7 @@ const Logout = () => {
 	return (
 		<>
 			<img
-				src={"https://avatar.iran.liara.run/public/91"}
+				src={"https://api.dicebear.com/8.x/fun-emoji/svg"}
 				className='w-10 h-10 rounded-full border border-gray-800'
 			/>
 
