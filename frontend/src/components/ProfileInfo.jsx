@@ -8,6 +8,8 @@ import { FaEye } from "react-icons/fa";
 
 import formatMemberSince from "../utils/functions"
 
+import LikeProfile from './LikeProfile';
+
 const ProfileInfo = ({userProfile}) => {
 	
 	// const userProfile = {
@@ -37,6 +39,7 @@ const ProfileInfo = ({userProfile}) => {
 					</a>
 					{/* View on Github */}
 					<div className='flex gap-2 items-center flex-col'>
+						<LikeProfile userProfile={userProfile} />
 						<a
 							href={userProfile?.html_url}
 							target='_blank'

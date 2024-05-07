@@ -45,3 +45,7 @@ export function formatDate(inputDateString) {
 	const formattedDate = `${monthName} ${getOrdinalSuffix(day)}, ${year}`;
 	return formattedDate;
 }
+
+export const handleLoginWithGithub = () => {
+	window.open("/api/auth/github", "_self");
+};
