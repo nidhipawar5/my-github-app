@@ -1,6 +1,6 @@
 # Build and Deploy a Github-like App | React, MongoDB, Express.js, Passport.js
 
-![Demo App](https://ibb.co/hVds5hF)
+![Demo App](https://i.postimg.cc/QNk01zSH/Screenshot-2024-05-08-at-8-18-11-PM.png)
 
 Some Features:
 
